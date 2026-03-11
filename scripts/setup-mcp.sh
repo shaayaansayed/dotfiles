@@ -34,7 +34,7 @@ for name, config in servers.items():
         print(f'  SKIP {name} — unresolved env vars in URL (set secrets first)')
         continue
 
-    cmd = ['claude', 'mcp', 'add', name, '--transport', server_type, url]
+    cmd = ['claude', 'mcp', 'add', name, '--scope', 'user', '--transport', server_type, url]
 
     # Add headers if present
     headers = config.get('headers', {})
