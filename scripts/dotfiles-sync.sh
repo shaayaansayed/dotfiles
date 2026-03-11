@@ -53,8 +53,20 @@ commit_changes() {
     rm -f "$LOCK_FILE"
 }
 
+SYNC_MCP="$DOTFILES_DIR/scripts/sync-mcp.sh"
+
 log "Starting dotfiles watcher on $DOTFILES_DIR"
 
+# Watch ~/.claude.json for MCP changes — run sync-mcp.sh, then commit
+/opt/homebrew/bin/fswatch -0 \
+    --latency 5 \
+    "$HOME/.claude.json" | while read -d "" event; do
+    log "Detected change in ~/.claude.json — syncing MCP servers"
+    "$SYNC_MCP" >> "$LOG_FILE" 2>&1 || log "sync-mcp.sh failed"
+    commit_changes
+done &
+
+# Watch the dotfiles repo itself for config changes
 /opt/homebrew/bin/fswatch -0 --recursive \
     --latency 5 \
     --exclude '\.git/' \

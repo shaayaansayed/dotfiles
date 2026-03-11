@@ -26,7 +26,8 @@ The install script will:
 3. Symlink all configs into place with stow
 4. Link agent skills into `~/.claude/skills/`
 5. Install Claude Code plugins dynamically from tracked config
-6. Start the auto-sync daemon (fswatch + launchd)
+6. Install MCP servers from `claude/mcp-servers.json` (secrets resolved from env vars)
+7. Start the auto-sync daemon (fswatch + launchd)
 
 ## Auto-sync
 
@@ -56,6 +57,7 @@ Nothing is hardcoded in `install.sh`. Everything is read dynamically from the re
 - **Claude Code plugins** — `install.sh` reads `installed_plugins.json` and `known_marketplaces.json` to determine what to install. When you add or remove a plugin via Claude Code, these files update automatically (they're symlinked) and the auto-sync daemon commits the change.
 - **Agent skills** — `install.sh` enumerates `agents/.agents/skills/*/` and symlinks each one into `~/.claude/skills/`. Drop a new skill folder in and it gets picked up.
 - **Claude skills** — managed directly by stow from `claude/.claude/skills/`.
+- **MCP servers** — defined in `claude/mcp-servers.json` as a template. API keys are referenced as `${EXA_API_KEY}`, `${CONTEXT7_API_KEY}`, etc. and resolved from your environment at install time. To add a new MCP server, either edit `mcp-servers.json` directly or run `claude mcp add` and then update the template.
 
 ## Secrets
 
@@ -74,7 +76,7 @@ dotfiles/
 ├── ghostty/        # ~/.config/ghostty/
 ├── claude/         # ~/.claude/ (settings, commands, skills, plugins)
 ├── agents/         # ~/.agents/skills/ (symlinked into ~/.claude/skills/)
-├── scripts/        # Auto-sync watcher
+├── scripts/        # Auto-sync watcher + MCP setup
 └── install.sh      # Bootstrap script
 ```
 

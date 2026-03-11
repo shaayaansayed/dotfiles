@@ -103,6 +103,11 @@ elif ! command -v claude &>/dev/null; then
     echo "==> Claude Code not found — install it, then re-run ./install.sh"
 fi
 
+# --- Install MCP servers ---
+echo "==> Installing MCP servers..."
+chmod +x "$DOTFILES_DIR/scripts/setup-mcp.sh"
+"$DOTFILES_DIR/scripts/setup-mcp.sh"
+
 # --- Setup secrets template ---
 if [ ! -f "$HOME/.config/fish/conf.d/secrets.fish" ]; then
     echo "==> No secrets.fish found. Copy the template and fill in your keys:"
