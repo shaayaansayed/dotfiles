@@ -1,0 +1,28 @@
+# Secrets — never commit
+**/secrets.fish
+**/fish_variables
+**/.env
+**/*.key
+**/*.pem
+
+# Machine-specific
+**/settings.local.json
+
+# OS junk
+.DS_Store
+**/.DS_Store
+
+# Editor
+*.swp
+*~
+
+# MCP servers with venvs
+**/mcp-servers/
+**/.venv/
+**/node_modules/
+
+# Plugin cache/marketplace code (auto-downloaded)
+**/plugins/cache/
+**/plugins/marketplaces/
+**/plugins/blocklist.json
+**/plugins/install-counts-cache.json

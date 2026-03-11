@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "plugins": {
+    "obsidian@obsidian-skills": [
+      {
+        "scope": "user",
+        "installPath": "/Users/ssayed/.claude/plugins/cache/obsidian-skills/obsidian/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-01-16T02:54:37.534Z",
+        "lastUpdated": "2026-01-16T02:54:37.534Z",
+        "gitCommitSha": "4540df83fc68a68bef27e83ae79bc4f1b4d2ea7c"
+      }
+    ],
+    "document-skills@anthropic-agent-skills": [
+      {
+        "scope": "user",
+        "installPath": "/Users/ssayed/.claude/plugins/cache/anthropic-agent-skills/document-skills/3d5951151859",
+        "version": "3d5951151859",
+        "installedAt": "2026-02-25T23:57:04.033Z",
+        "lastUpdated": "2026-02-25T23:57:04.033Z",
+        "gitCommitSha": "3d59511518591fa82e6cfcf0438d68dd5dad3e76"
+      }
+    ],
+    "playwright-skill@playwright-skill": [
+      {
+        "scope": "user",
+        "installPath": "/Users/ssayed/.claude/plugins/cache/playwright-skill/playwright-skill/4.1.0",
+        "version": "4.1.0",
+        "installedAt": "2026-03-01T19:31:54.998Z",
+        "lastUpdated": "2026-03-01T19:31:54.998Z",
+        "gitCommitSha": "bb7e920d376022958214e349ef25498a2644e189"
+      }
+    ],
+    "context-mode@claude-context-mode": [
+      {
+        "scope": "user",
+        "installPath": "/Users/ssayed/.claude/plugins/cache/claude-context-mode/context-mode/0.9.22",
+        "version": "0.9.22",
+        "installedAt": "2026-03-01T19:59:18.240Z",
+        "lastUpdated": "2026-03-10T22:45:03.583Z",
+        "gitCommitSha": "8c36b4c647854e45853b43ead0a5fce44f847834"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+# always launch into tmux (attach existing or create new)
+command = /opt/homebrew/bin/tmux new-session -A -s main

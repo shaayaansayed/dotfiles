@@ -1,0 +1,42 @@
+{
+  "obsidian-skills": {
+    "source": {
+      "source": "github",
+      "repo": "kepano/obsidian-skills"
+    },
+    "installLocation": "/Users/ssayed/.claude/plugins/marketplaces/obsidian-skills",
+    "lastUpdated": "2026-01-16T02:54:27.464Z"
+  },
+  "claude-plugins-official": {
+    "source": {
+      "source": "git",
+      "url": "git@github.com:anthropics/claude-plugins-official.git"
+    },
+    "installLocation": "/Users/ssayed/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-03-11T14:30:45.099Z"
+  },
+  "anthropic-agent-skills": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/skills"
+    },
+    "installLocation": "/Users/ssayed/.claude/plugins/marketplaces/anthropic-agent-skills",
+    "lastUpdated": "2026-02-25T23:56:11.514Z"
+  },
+  "playwright-skill": {
+    "source": {
+      "source": "github",
+      "repo": "lackeyjb/playwright-skill"
+    },
+    "installLocation": "/Users/ssayed/.claude/plugins/marketplaces/playwright-skill",
+    "lastUpdated": "2026-03-01T19:31:47.099Z"
+  },
+  "claude-context-mode": {
+    "source": {
+      "source": "github",
+      "repo": "mksglu/claude-context-mode"
+    },
+    "installLocation": "/Users/ssayed/.claude/plugins/marketplaces/claude-context-mode",
+    "lastUpdated": "2026-03-04T19:05:24.772Z"
+  }
+}
